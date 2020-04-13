@@ -1,0 +1,176 @@
+_type: export
+__export_format: 4
+__export_date: 2020-04-13T20:27:36.673Z
+__export_source: insomnia.desktop.app:v7.1.1
+resources:
+  - _id: req_b8077fb0a94e4154ab160c7ef291ca87
+    authentication: {}
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  createUser(userInput: {country: \"BD\", name:
+        \"Tonoy\"}) {\n    id\n    country\n    name\n  }\n}\n"}'
+    created: 1586611180350
+    description: ""
+    headers:
+      - id: pair_bd0d672027f84d1f8d71d77919938aed
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1586611180350
+    method: POST
+    modified: 1586809607370
+    name: Create User
+    parameters: []
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/graphql"
+    _type: request
+  - _id: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    created: 1586611172391
+    description: ""
+    modified: 1586611172391
+    name: GraphQL with DotNet
+    parentId: null
+    _type: workspace
+  - _id: req_96b7eecb93f1490c9ae71c01e2ff08db
+    authentication: {}
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  createMessage(messageInput: {text: \"Learning
+        DotNet\", userId: \"5e94c451b3c13e032c7889c5\"})
+        {\n    id\n    created\n    createdBy{\n      name\n    }\n  }\n}\n"}'
+    created: 1586809333190
+    description: ""
+    headers:
+      - id: pair_bd0d672027f84d1f8d71d77919938aed
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1586440081442.25
+    method: POST
+    modified: 1586809606615
+    name: Create Message
+    parameters: []
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/graphql"
+    _type: request
+  - _id: req_89d6153760054ea4833fcf4d87678fa5
+    authentication: {}
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  usersByCountry(country: \"BD\")
+        {\n    name\n    id\n  }\n}\n"}'
+    created: 1586809142308
+    description: ""
+    headers:
+      - id: pair_bd0d672027f84d1f8d71d77919938aed
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1586268982534.5
+    method: POST
+    modified: 1586809605772
+    name: Get User By Country
+    parameters: []
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/graphql"
+    _type: request
+  - _id: req_f6a26e42a08e4bdca0c172ab32a89ade
+    authentication: {}
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  messages(first: 2) {\n    totalCount\n    edges
+        {\n      cursor\n      node
+        {\n        id\n        text\n        created\n        createdBy
+        {\n          id\n          name\n          country\n        }\n      }\n    }\n  }\n}\n"}'
+    created: 1586809201635
+    description: ""
+    headers:
+      - id: pair_bd0d672027f84d1f8d71d77919938aed
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1586097883626.75
+    method: POST
+    modified: 1586809604752
+    name: Get Message
+    parameters: []
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/graphql"
+    _type: request
+  - _id: req_b0532d4a4c354f95802dca0dc3dfe7d5
+    authentication: {}
+    body: {}
+    created: 1586808628382
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1585926784719
+    method: GET
+    modified: 1586808638309
+    name: Get Schema
+    parameters: []
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/graphql/schema"
+    _type: request
+  - _id: env_6580f148e707c500ba67b8d99de456eb89f37729
+    color: null
+    created: 1586611172863
+    data: {}
+    dataPropertyOrder: null
+    isPrivate: false
+    metaSortKey: 1586611172863
+    modified: 1586611172863
+    name: Base Environment
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    _type: environment
+  - _id: jar_6580f148e707c500ba67b8d99de456eb89f37729
+    cookies: []
+    created: 1586611172873
+    modified: 1586611172873
+    name: Default Jar
+    parentId: wrk_ff8a9f4615c148928e79ea0cb9c39fa4
+    _type: cookie_jar
+  - _id: env_602eb8854a6d4b60b69ef004439d78ac
+    color: null
+    created: 1586612948298
+    data:
+      base_url: http://localhost:42353
+    dataPropertyOrder:
+      "&":
+        - base_url
+    isPrivate: false
+    metaSortKey: 1586612948298
+    modified: 1586613037646
+    name: Devlopment
+    parentId: env_6580f148e707c500ba67b8d99de456eb89f37729
+    _type: environment
